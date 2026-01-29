@@ -1,11 +1,11 @@
 # CGeom
 ---
 
-#Introduction 
+# Introduction 
 The most useless yet fun project I will be working on for the next {insert value here} year. (pun intended)
 
 ---
-##Dependencies
+## Dependencies
 
 For running the script make sure you have installed 
 ```
@@ -14,6 +14,6 @@ For running the script make sure you have installed
 ```
 
 ---
-##Documentations
+## Documentations
 
 I am working on it. It is my first big project so I am still learning
