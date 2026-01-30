@@ -24,7 +24,6 @@ typedef struct{
 
 Camera cam = {cam_x, cam_y, cam_zoom, WIDTH, HEIGHT};
 
-
 void DrawRect(SDL_Renderer* renderer,Camera* cam, SDL_FRect* worldRect){
 	SDL_FRect screenRect;
     	screenRect.x = (worldRect->x - cam->x) * cam->zoom + (cam->w / 2.0f);
@@ -71,10 +70,10 @@ while (isRunning) {
         const Uint8* state = SDL_GetKeyboardState(NULL);
         float speed = 400.0f * (float)delta_time; // 400 pixels per second
         
-        if (state[SDL_SCANCODE_LEFT])  cam.x -= speed / cam.zoom;
-        if (state[SDL_SCANCODE_RIGHT]) cam.x += speed / cam.zoom;
-        if (state[SDL_SCANCODE_UP])    cam.y -= speed / cam.zoom;
-        if (state[SDL_SCANCODE_DOWN])  cam.y += speed / cam.zoom;
+        if (state[SDL_SCANCODE_RIGHT])  cam.x -= speed / cam.zoom;
+        if (state[SDL_SCANCODE_LEFT]) cam.x += speed / cam.zoom;
+        if (state[SDL_SCANCODE_DOWN])    cam.y -= speed / cam.zoom;
+        if (state[SDL_SCANCODE_UP])  cam.y += speed / cam.zoom;
 
         SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255); // Black
         SDL_RenderClear(renderer);
